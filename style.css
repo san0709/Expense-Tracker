@@ -177,6 +177,7 @@ img {
     border: none;
     margin: 6px;
     cursor: pointer;
+    background: none;
 }
 
 .fa-trash:hover {

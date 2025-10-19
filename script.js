@@ -1,23 +1,70 @@
-// Get element reference globally
-const incomeInput = document.getElementById("incomeAmount");
+const incomeInput = document.getElementById("incomeInput");
+const totalIncome = document.getElementById("totalIncome");
+const expenseDescription = document.getElementById("expense-description")
+const expenseAmount = document.getElementById("expense-amount");
+const totalExpense = document.getElementById("total-expense");
+const budgetLeft = document.getElementById("budget-left");
+const expenseTable = document.getElementById("expense-table");
 
-// Function to run when the button is clicked
+
 function getInputAmount() {
-    // Check if the element was successfully found
-    if (!incomeInput) {
-        console.error("Error: Income input element not found (ID 'amount').");
-        return;
+
+    const incomeInputValue = Number(incomeInput.value);
+    const currentTotal = Number(totalIncome.textContent);
+    if (incomeInputValue == 0) {
+        alert("Enter valid amount!!")
+    } else {
+        const newTotal = currentTotal + incomeInputValue;
+        totalIncome.textContent = newTotal;
+        const currentExpense = Number(totalExpense.textContent);
+        const newBudgetLeft = calculateBudget(newTotal, currentExpense);
+        budgetLeft.textContent = newBudgetLeft;
     }
-
-    // Get the value
-    const incomeInputValue = incomeInput.value;
-
-    // Log the value
-    console.log("Income Amount:", incomeInputValue);
-
-    // Clear the input field (Optional, but good UX)
     incomeInput.value = '';
 }
 
-// No event listener needed since you're using onclick in the HTML.
-// The code is clean and should now work without errors or reloads!
+function getExpenseDetails() {
+
+    const descriptionValue = expenseDescription.value;
+    const expenseInput = Number(expenseAmount.value);
+    const currentExpenseTotal = Number(totalExpense.textContent)
+
+    if (expenseInput == 0 || Number(descriptionValue) == 0) {
+        alert("Enter valid amount and description!!");
+    }
+    else {
+        const newExpenseTotal = currentExpenseTotal + expenseInput;
+        totalExpense.textContent = newExpenseTotal;
+        generateExpenseData(descriptionValue, expenseInput);
+        const currentIncome = Number(totalIncome.textContent);
+        const newBudgetLeft = calculateBudget(currentIncome, newExpenseTotal);
+        budgetLeft.textContent = newBudgetLeft;
+
+    }
+
+    expenseDescription.value = '';
+    expenseAmount.value = ''
+}
+
+function generateExpenseData(description, amount) {
+    let createRow = document.createElement('tr');
+    createRow.innerHTML = `
+        <td>${description}</td>
+        <td>${amount}</td>
+        <td><button class="edit-icons"><i class="fa-solid fa-pen-to-square fa-xl"
+            style="color: #0d4370;"></i></button>
+            <button class="edit-icons"><i class="fa-solid fa-trash fa-xl"
+                style="color: #0d4370;"></i></button>
+        </td>`
+    expenseTable.append(createRow);
+}
+
+function reset() {
+    window.location.reload();
+}
+
+function calculateBudget(income, expense) {
+    const remaningBudget = income - expense;
+    return remaningBudget;
+}
+

@@ -21,53 +21,42 @@
             <div class="card border"">
                 <h2>Income</h2>
                 <label >Amount:</label>
-                <input id=" incomeAmount" type="number" />
+                <input type=" number" id="incomeInput" />
             <button id="addIncome" onclick="getInputAmount()">Add Income</button>
         </div>
         <div class="card">
             <h2>Expense</h2>
             <label>Description:</label>
-            <input type="text" />
+            <input type="text" id="expense-description" />
             <label>Amount:</label>
-            <input type="number" />
-            <button>Add Expense</button>
+            <input type="number" / id="expense-amount">
+            <button onclick="getExpenseDetails()">Add Expense</button>
         </div>
-        <button class="reset">Reset All</button>
+        <button class="reset" onclick="reset()">Reset All</button>
     </div>
     <div class="right-container">
         <div class="rightside-contents">
             <div class="total-income content">
                 <p>Total Income</p> <img src="income.png" />
-                <div>1000</div>
+                <div id="totalIncome">0</div>
             </div>
             <div class="total-expense content">
                 <p>Total Expense</p> <img src="expense.png" />
-                <div>900</div>
+                <div id="total-expense">0</div>
             </div>
             <div class="budget-left content">
                 <p>Budget Left</p><img src="budjet.png" />
-                <div>100</div>
+                <div id="budget-left">0</div>
             </div>
         </div>
         <div class="expense-history">
             <h3>Expense History</h3>
-            <table>
+            <table id="expense-table">
                 <tr>
-                    <th>Expense Name</th>
+                    <th>Description</th>
                     <th>Amount</th>
                     <th>Action</th>
                 </tr>
-                <tr>
-                    <td>Data 1</td>
-                    <td>Data 2</td>
-                    <td><button class="edit-icons"><i class="fa-solid fa-pen-to-square fa-xl"
-                                style="color: #0d4370;"></i></button>
-                        <button class="edit-icons"><i class="fa-solid fa-trash fa-xl"
-                                style="color: #0d4370;"></i></button>
-
-                    </td>
-                </tr>
-
             </table>
         </div>
     </div>
