@@ -63,6 +63,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
     margin: 2px;
+    letter-spacing: 2px;
 
 }
 
@@ -88,12 +89,12 @@ td {
 .expense-history table th {
     background-color: rgb(13, 67, 112);
     color: white;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .expense-history table td {
     color: rgb(13, 67, 112);
-    font-size: 12px;
+    font-size: 14px;
 
 }
 
@@ -107,6 +108,7 @@ td {
         margin: 12px;
         color: rgb(13, 67, 112);
         font-weight: 900;
+        letter-spacing: 2px;
     }
 
 }
@@ -169,4 +171,18 @@ img {
     width: 40px;
     height: 40px;
     margin: 12px;
+}
+
+.edit-icons {
+    border: none;
+    margin: 6px;
+    cursor: pointer;
+}
+
+.fa-trash:hover {
+    color: #c30a1c !important;
+}
+
+.fa-pen-to-square:hover {
+    color: #FEBE10 !important;
 }
