@@ -17,9 +17,11 @@ body {
 .main-container {
     padding: 20px;
     width: 1024px;
+    height: 620px;
     border: 2px solid black;
     border-radius: 12px;
     display: flex;
+    margin: 8px;
     background-color: #c4daf2;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
@@ -28,11 +30,15 @@ body {
 .right-container {
     display: flex;
     flex-direction: column;
-    margin: 8px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
 }
 
 .left-container {
     width: 35%;
+    justify-content: space-around;
 }
 
 .right-container {
@@ -42,14 +48,48 @@ body {
 .card {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
-.card h3 {
+.card input,
+.card button {
+    color: rgb(77, 104, 118);
+    border: none;
+    margin-bottom: 12px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.35s;
+    font-size: medium;
+}
+
+.reset {
+    border: none;
+    margin-bottom: 12px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.15s;
+    font-size: medium;
+}
+
+.card input:hover,
+button:hover {
+    background-color: rgb(143, 144, 146);
+    color: white;
+    font-weight: 600;
+    border: 1px solid rgb(102, 102, 104);
+}
+
+.card h2 {
     margin-bottom: 6px;
+    color: rgb(8, 40, 246);
 }
 
 .card label {
     margin-bottom: 6px;
     font-size: 14px;
-    color: rgb(73, 73, 74);
+    color: rgb(77, 104, 118);
 }
