@@ -20,6 +20,36 @@ body {
     border: 2px solid black;
     border-radius: 12px;
     display: flex;
-    background-color: #778899;
+    background-color: #c4daf2;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.left-container,
+.right-container {
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+}
+
+.left-container {
+    width: 35%;
+}
+
+.right-container {
+    width: 65%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card h3 {
+    margin-bottom: 6px;
+}
+
+.card label {
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: rgb(73, 73, 74);
 }
