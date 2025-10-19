@@ -18,59 +18,59 @@
 <body>
     <div class="main-container">
         <div class="left-container">
-            <form class="card border"">
+            <div class="card border"">
                 <h2>Income</h2>
-                <label>Amount:</label>
-                <input type=" number" />
-            <button>Add Income</button>
-            </form>
-            <form class="card">
-                <h2>Expense</h2>
-                <label>Description:</label>
-                <input type="text" />
-                <label>Amount:</label>
-                <input type="number" />
-                <button>Add Expense</button>
-            </form>
-            <button class="reset">Reset All</button>
+                <label >Amount:</label>
+                <input id=" incomeAmount" type="number" />
+            <button id="addIncome" onclick="getInputAmount()">Add Income</button>
         </div>
-        <div class="right-container">
-            <div class="rightside-contents">
-                <div class="total-income content">
-                    <p>Total Income</p> <img src="income.png" />
-                    <div>1000</div>
-                </div>
-                <div class="total-expense content">
-                    <p>Total Expense</p> <img src="expense.png" />
-                    <div>900</div>
-                </div>
-                <div class="budget-left content">
-                    <p>Budget Left</p><img src="budjet.png" />
-                    <div>100</div>
-                </div>
+        <div class="card">
+            <h2>Expense</h2>
+            <label>Description:</label>
+            <input type="text" />
+            <label>Amount:</label>
+            <input type="number" />
+            <button>Add Expense</button>
+        </div>
+        <button class="reset">Reset All</button>
+    </div>
+    <div class="right-container">
+        <div class="rightside-contents">
+            <div class="total-income content">
+                <p>Total Income</p> <img src="income.png" />
+                <div>1000</div>
             </div>
-            <div class="expense-history">
-                <h3>Expense History</h3>
-                <table>
-                    <tr>
-                        <th>Expense Name</th>
-                        <th>Amount</th>
-                        <th>Action</th>
-                    </tr>
-                    <tr>
-                        <td>Data 1</td>
-                        <td>Data 2</td>
-                        <td><button class="edit-icons"><i class="fa-solid fa-pen-to-square fa-xl"
-                                    style="color: #0d4370;"></i></button>
-                            <button class="edit-icons"><i class="fa-solid fa-trash fa-xl"
-                                    style="color: #0d4370;"></i></button>
-
-                        </td>
-                    </tr>
-
-                </table>
+            <div class="total-expense content">
+                <p>Total Expense</p> <img src="expense.png" />
+                <div>900</div>
+            </div>
+            <div class="budget-left content">
+                <p>Budget Left</p><img src="budjet.png" />
+                <div>100</div>
             </div>
         </div>
+        <div class="expense-history">
+            <h3>Expense History</h3>
+            <table>
+                <tr>
+                    <th>Expense Name</th>
+                    <th>Amount</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>Data 1</td>
+                    <td>Data 2</td>
+                    <td><button class="edit-icons"><i class="fa-solid fa-pen-to-square fa-xl"
+                                style="color: #0d4370;"></i></button>
+                        <button class="edit-icons"><i class="fa-solid fa-trash fa-xl"
+                                style="color: #0d4370;"></i></button>
+
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
     </div>
     <script src="script.js"></script>
 </body>
